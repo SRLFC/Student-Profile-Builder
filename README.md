@@ -21,7 +21,7 @@ browser, and it works.
 ## Getting started
 
 ```bash
-git clone https://github.com/<your-username>/student-profile-builder.git
+git clone https://github.com/<SRLFC>/student-profile-builder.git
 cd student-profile-builder
 open index.html   # or just double-click it
 ```
