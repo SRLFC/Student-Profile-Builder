@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Profile Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>Student Profile Builder</h1>
+    <p>Fill in the form. Your profile appears on the right as you type. Nothing leaves this browser.</p>
+  </header>
+
+  <main class="layout">
+
+    <!-- LEFT SIDE: the form the student fills in -->
+    <section class="form-panel" aria-label="Profile form">
+      <form id="profile-form" novalidate>
+
+        <fieldset>
+          <legend>About me</legend>
+
+          <label for="field-name">Full name</label>
+          <input type="text" id="field-name" name="name">
+
+          <label for="field-school">School</label>
+          <input type="text" id="field-school" name="school">
+
+          <label for="field-grade">Grade / year</label>
+          <input type="text" id="field-grade" name="grade">
+
+          <label for="field-city">City</label>
+          <input type="text" id="field-city" name="city">
+
+          <label for="field-about">About me (max 300 characters)</label>
+          <textarea id="field-about" name="about" maxlength="300" rows="4"></textarea>
+          <p class="char-count" id="about-count">0 / 300 characters</p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Subjects</legend>
+          <div id="subjects-list" class="row-list"></div>
+          <button type="button" id="add-subject" class="add-row-btn">Add another subject</button>
+        </fieldset>
+
+        <fieldset>
+          <legend>Achievements</legend>
+          <div id="achievements-list" class="row-list"></div>
+          <button type="button" id="add-achievement" class="add-row-btn">Add another achievement</button>
+        </fieldset>
+
+        <fieldset>
+          <legend>Activities &amp; clubs</legend>
+          <div id="activities-list" class="row-list"></div>
+          <button type="button" id="add-activity" class="add-row-btn">Add another activity</button>
+        </fieldset>
+
+        <fieldset>
+          <legend>Skills</legend>
+          <label for="field-skills">Skills (comma-separated)</label>
+          <input type="text" id="field-skills" name="skills" placeholder="e.g. Python, public speaking, chess">
+        </fieldset>
+
+        <fieldset>
+          <legend>Interests</legend>
+          <label for="field-interests">Interests (comma-separated)</label>
+          <input type="text" id="field-interests" name="interests" placeholder="e.g. robotics, football, painting">
+        </fieldset>
+
+        <fieldset>
+          <legend>Goal</legend>
+          <label for="field-goal">What I want to do after school</label>
+          <input type="text" id="field-goal" name="goal">
+        </fieldset>
+
+      </form>
+
+      <div class="actions">
+        <button type="button" id="save-btn">Save</button>
+        <button type="button" id="load-btn">Load</button>
+        <button type="button" id="clear-btn">Clear</button>
+        <button type="button" id="print-btn">Print / Save as PDF</button>
+      </div>
+    </section>
+
+    <!-- RIGHT SIDE: the preview that JavaScript builds from the form -->
+    <section class="preview-panel" aria-label="Profile preview">
+      <div id="preview"></div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
